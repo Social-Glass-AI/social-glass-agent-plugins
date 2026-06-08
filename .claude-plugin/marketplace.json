@@ -1,0 +1,18 @@
+{
+  "name": "social-glass",
+  "description": "Social Glass internal agent and MCP plugins.",
+  "owner": {
+    "name": "Social Glass"
+  },
+  "plugins": [
+    {
+      "name": "social-glass",
+      "source": "./plugins/social-glass",
+      "description": "Connect Claude Code to the Social Glass MCP with safe read-first usage guidance.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Social Glass"
+      }
+    }
+  ]
+}

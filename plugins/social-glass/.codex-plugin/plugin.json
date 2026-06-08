@@ -1,0 +1,39 @@
+{
+  "name": "social-glass",
+  "version": "0.1.0",
+  "description": "Social Glass MCP endpoint and usage guidance for Codex.",
+  "author": {
+    "name": "Social Glass",
+    "url": "https://socialglass.ai"
+  },
+  "homepage": "https://socialglass.ai",
+  "repository": "https://github.com/Social-Glass-AI/social-glass-agent-plugins",
+  "license": "UNLICENSED",
+  "keywords": [
+    "social-glass",
+    "mcp",
+    "codex",
+    "insights"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.codex-mcp.json",
+  "interface": {
+    "displayName": "Social Glass",
+    "shortDescription": "Connect Codex to the Social Glass MCP.",
+    "longDescription": "Bundles the canonical Social Glass MCP endpoint with a repo-native skill that teaches the safe read-first workflow and role-gated admin writes.",
+    "developerName": "Social Glass",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write",
+      "OAuth"
+    ],
+    "websiteURL": "https://socialglass.ai",
+    "defaultPrompt": [
+      "Connect to Social Glass and show my viewer context.",
+      "Search Social Glass zeitlets for one organization.",
+      "Use Social Glass write tools to update insights."
+    ],
+    "brandColor": "#0F766E"
+  }
+}

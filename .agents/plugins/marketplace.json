@@ -1,0 +1,20 @@
+{
+  "name": "social-glass",
+  "interface": {
+    "displayName": "Social Glass"
+  },
+  "plugins": [
+    {
+      "name": "social-glass",
+      "source": {
+        "source": "local",
+        "path": "./plugins/social-glass"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
