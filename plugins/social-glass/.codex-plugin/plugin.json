@@ -1,7 +1,7 @@
 {
   "name": "social-glass",
-  "version": "0.1.0",
-  "description": "Social Glass MCP endpoint and usage guidance for Codex.",
+  "version": "0.1.1",
+  "description": "Social Glass MCP endpoint for Codex.",
   "author": {
     "name": "Social Glass",
     "url": "https://socialglass.ai"
@@ -15,12 +15,11 @@
     "codex",
     "insights"
   ],
-  "skills": "./skills/",
   "mcpServers": "./.codex-mcp.json",
   "interface": {
     "displayName": "Social Glass",
     "shortDescription": "Connect Codex to the Social Glass MCP.",
-    "longDescription": "Bundles the canonical Social Glass MCP endpoint with a repo-native skill that teaches the safe read-first workflow and role-gated admin writes.",
+    "longDescription": "Bundles the canonical Social Glass MCP endpoint. The server provides current Social Glass operating guidance through its get_instructions tool.",
     "developerName": "Social Glass",
     "category": "Productivity",
     "capabilities": [

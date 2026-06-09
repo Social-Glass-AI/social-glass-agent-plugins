@@ -7,7 +7,6 @@ Use Social Glass from Codex or Claude Code through the live remote MCP endpoint:
 The plugin bundles:
 
 - MCP server config for the canonical Social Glass endpoint
-- a Social Glass usage skill with the safe read-first/admin-write workflow
 - Codex and Claude Code marketplace metadata for installation
 
 For setup details, see [Social Glass MCP setup](https://docs.socialglass.ai/reference/mcp-setup).
@@ -48,7 +47,7 @@ claude plugin install social-glass@social-glass
 
 After install, start a new Claude Code session. Use `/mcp` to authenticate if the server asks for OAuth.
 
-If someone only wants to add the MCP server directly in Claude Code without installing the skill:
+If someone only wants to add the MCP server directly in Claude Code without installing the plugin:
 
 ```bash
 claude mcp add --transport http social-glass https://mcp.socialglass.ai/mcp
@@ -64,7 +63,7 @@ For nontechnical teammates who do not use Codex or Claude Code, add the hosted M
 https://mcp.socialglass.ai/mcp
 ```
 
-This gives Claude the MCP tools and server initialization instructions. It does not install plugin skills. Claude currently supports custom connectors on Free, Pro, Max, Team, and Enterprise plans; Free users are limited to one custom connector.
+This gives Claude the MCP tools and server initialization instructions from the hosted endpoint. Claude currently supports custom connectors on Free, Pro, Max, Team, and Enterprise plans; Free users are limited to one custom connector.
 
 ## Local dev install
 

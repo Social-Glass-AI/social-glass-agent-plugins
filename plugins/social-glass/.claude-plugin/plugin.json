@@ -1,8 +1,8 @@
 {
   "name": "social-glass",
   "displayName": "Social Glass",
-  "version": "0.1.0",
-  "description": "Social Glass MCP endpoint and safe usage guidance for Claude Code.",
+  "version": "0.1.1",
+  "description": "Social Glass MCP endpoint for Claude Code.",
   "author": {
     "name": "Social Glass",
     "url": "https://socialglass.ai"
@@ -16,6 +16,5 @@
     "claude-code",
     "insights"
   ],
-  "skills": "./skills/",
   "mcpServers": "./.mcp.json"
 }
