@@ -11,6 +11,31 @@ The plugin bundles:
 
 For setup details, see [Social Glass MCP setup](https://docs.socialglass.ai/reference/mcp-setup).
 
+The plugin does not bundle a usage skill or a copy of the Social Glass agent prompt. The hosted MCP
+server owns runtime guidance: initialization tells clients to call `get_viewer_context`, then
+`get_instructions`, and `get_instructions` returns the effective Social Glass instructions for the
+authenticated viewer and organization.
+
+## Source and generated copies
+
+Edit this package in the private app repo:
+
+```text
+plugins/social-glass
+```
+
+The public marketplace package is generated into the sibling repo:
+
+```text
+../social-glass-agent-plugins/plugins/social-glass
+```
+
+Do not edit the Codex marketplace cache directly. It is installer output, commonly under:
+
+```text
+~/.codex/.tmp/marketplaces/social-glass
+```
+
 ## MCP config files
 
 The MCP runtime is one hosted endpoint. The plugin keeps separate wrapper config files because Codex and Claude Code use different JSON shapes for bundled MCP server config:
@@ -95,6 +120,19 @@ claude plugin update social-glass
 
 For a local-path marketplace source, just update the repo checkout. `upgrade` does not apply to local marketplaces.
 
+For maintainers changing the plugin wrapper, release from the private app repo:
+
+```bash
+pnpm plugins:check-public
+pnpm plugins:sync-public
+git -C ../social-glass-agent-plugins status --short --branch
+git -C ../social-glass-agent-plugins log --oneline origin/main..HEAD
+```
+
+Commit and push both this repo and the generated public marketplace repo when wrapper files change.
+MCP server/tool behavior changes only need an app deploy unless the plugin metadata or bundled MCP
+config changed.
+
 ## Auth expectations
 
 - Read access is self-serve for eligible Social Glass users.
@@ -104,5 +142,10 @@ For a local-path marketplace source, just update the repo checkout. `upgrade` do
 ## First prompts
 
 - `Connect to Social Glass and show my viewer context.`
+- `Call get_instructions for my current Social Glass organization.`
 - `Search Social Glass zeitlets for one organization.`
-- `Use Social Glass write tools to update insights.`
+- `List projects for an organization and fetch one project with linked contents.`
+
+Use write prompts only after deciding to mutate Social Glass data. Write tools are visible only to
+Social Glass admins and should include the intended `organizationId` when operating outside the
+viewer default organization.
