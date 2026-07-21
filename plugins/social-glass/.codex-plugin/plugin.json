@@ -1,6 +1,6 @@
 {
   "name": "social-glass",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Social Glass MCP endpoint for Codex.",
   "author": {
     "name": "Social Glass",
@@ -15,7 +15,8 @@
     "codex",
     "insights"
   ],
-  "mcpServers": "./.codex-mcp.json",
+  "mcpServers": "./.mcp.json",
+  "skills": "./skills/",
   "interface": {
     "displayName": "Social Glass",
     "shortDescription": "Connect Codex to the Social Glass MCP.",

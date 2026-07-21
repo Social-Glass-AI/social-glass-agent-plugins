@@ -7,14 +7,15 @@ Use Social Glass from Codex or Claude Code through the live remote MCP endpoint:
 The plugin bundles:
 
 - MCP server config for the canonical Social Glass endpoint
+- canonical Social Glass workflow skills from `plugins/social-glass/skills/*`
 - Codex and Claude Code marketplace metadata for installation
 
 For setup details, see [Social Glass MCP setup](https://docs.socialglass.ai/reference/mcp-setup).
 
-The plugin does not bundle a usage skill or a copy of the Social Glass agent prompt. The hosted MCP
-server owns runtime guidance: initialization tells clients to call `get_viewer_context`, then
-`get_instructions`, and `get_instructions` returns the effective Social Glass instructions for the
-authenticated viewer and organization.
+The bundled skills contain stable, reusable workflows. The hosted MCP server still owns dynamic
+runtime guidance: initialization tells clients to call `get_viewer_context`, then `get_instructions`,
+and `get_instructions` returns the effective instructions for the authenticated viewer and
+organization.
 
 ## Source and generated copies
 
@@ -38,10 +39,9 @@ Do not edit the Codex marketplace cache directly. It is installer output, common
 
 ## MCP config files
 
-The MCP runtime is one hosted endpoint. The plugin keeps separate wrapper config files because Codex and Claude Code use different JSON shapes for bundled MCP server config:
+The MCP runtime is one hosted endpoint. Codex and Claude Code share one wrapper configuration file:
 
-- `plugins/social-glass/.codex-mcp.json`: Codex plugin MCP config using `mcp_servers`
-- `plugins/social-glass/.mcp.json`: Claude Code plugin MCP config using `mcpServers`
+- `plugins/social-glass/.mcp.json`: shared Codex and Claude Code plugin MCP config
 
 Do not fork the server URL or tool contracts between clients.
 
@@ -90,6 +90,25 @@ https://mcp.socialglass.ai/mcp
 
 This gives Claude the MCP tools and server initialization instructions from the hosted endpoint. Claude currently supports custom connectors on Free, Pro, Max, Team, and Enterprise plans; Free users are limited to one custom connector.
 
+## Skills-only install
+
+If the Social Glass MCP is already configured separately, install only the canonical skills through
+the skills.sh CLI:
+
+```bash
+npx skills add Social-Glass-AI/social-glass-agent-plugins --skill '*' -g -y
+```
+
+Update that installation with:
+
+```bash
+npx skills update -g -y
+```
+
+Use either the skills-only installation or the combined Social Glass plugin so an agent does not
+discover duplicate copies of the same skills. The combined plugin remains the default because it
+installs the MCP configuration and skills together.
+
 ## Local dev install
 
 If someone already has a local clone and wants to test plugin changes before they land on the shared branch:
@@ -120,7 +139,7 @@ claude plugin update social-glass
 
 For a local-path marketplace source, just update the repo checkout. `upgrade` does not apply to local marketplaces.
 
-For maintainers changing the plugin wrapper, release from the private app repo:
+For maintainers changing a skill or the plugin wrapper, release from the private app repo:
 
 ```bash
 pnpm plugins:check-public
@@ -129,7 +148,7 @@ git -C ../social-glass-agent-plugins status --short --branch
 git -C ../social-glass-agent-plugins log --oneline origin/main..HEAD
 ```
 
-Commit and push both this repo and the generated public marketplace repo when wrapper files change.
+Commit and push both this repo and the generated public marketplace repo when skill or wrapper files change.
 MCP server/tool behavior changes only need an app deploy unless the plugin metadata or bundled MCP
 config changed.
 
@@ -142,10 +161,10 @@ config changed.
 ## First prompts
 
 - `Connect to Social Glass and show my viewer context.`
-- `Call get_instructions for my current Social Glass organization.`
+- `Call list_organizations to find a client organization, then call get_instructions for it.`
 - `Search Social Glass zeitlets for one organization.`
 - `List projects for an organization and fetch one project with linked contents.`
 
 Use write prompts only after deciding to mutate Social Glass data. Write tools are visible only to
-Social Glass admins and should include the intended `organizationId` when operating outside the
-viewer default organization.
+Social Glass admins and must include the intended client `organizationId`; the admin home org is
+identity context, not a default client workspace.
