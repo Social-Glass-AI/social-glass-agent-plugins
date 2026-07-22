@@ -1,6 +1,6 @@
 {
   "name": "social-glass",
-  "description": "Social Glass internal agent and MCP plugins.",
+  "description": "Social Glass plugins for culture and consumer insight workflows.",
   "owner": {
     "name": "Social Glass"
   },
@@ -8,8 +8,8 @@
     {
       "name": "social-glass",
       "source": "./plugins/social-glass",
-      "description": "Connect Claude Code to the Social Glass MCP.",
-      "version": "0.1.2",
+      "description": "Explore live culture and consumer insights from Social Glass.",
+      "version": "0.1.3",
       "author": {
         "name": "Social Glass"
       }

@@ -1,7 +1,7 @@
 {
   "name": "social-glass",
-  "version": "0.1.2",
-  "description": "Social Glass MCP endpoint for Codex.",
+  "version": "0.1.3",
+  "description": "Explore live culture and consumer insights from Social Glass.",
   "author": {
     "name": "Social Glass",
     "url": "https://socialglass.ai"
@@ -19,8 +19,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Social Glass",
-    "shortDescription": "Connect Codex to the Social Glass MCP.",
-    "longDescription": "Bundles the canonical Social Glass MCP endpoint. The server provides current Social Glass operating guidance through its get_instructions tool.",
+    "shortDescription": "Explore live culture and consumer insights.",
+    "longDescription": "Bring Social Glass into Codex to explore emerging cultural shifts, research creators and content, and work with your organization's insights and reports.",
     "developerName": "Social Glass",
     "category": "Productivity",
     "capabilities": [
@@ -30,10 +30,12 @@
     ],
     "websiteURL": "https://socialglass.ai",
     "defaultPrompt": [
-      "Connect to Social Glass and show my viewer context.",
-      "Search Social Glass zeitlets for one organization.",
-      "Use Social Glass write tools to update insights."
+      "What cultural shifts are emerging for my organization?",
+      "Find recent posts supporting our strongest insights.",
+      "Summarize the creators shaping this audience."
     ],
-    "brandColor": "#0F766E"
+    "brandColor": "#6A062E",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
   }
 }
