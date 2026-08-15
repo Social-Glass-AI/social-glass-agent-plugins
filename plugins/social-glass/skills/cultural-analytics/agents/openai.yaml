@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cultural analytics"
+  short_description: "Measure cultural patterns in Social Glass"
+  default_prompt: "Use Social Glass to estimate or measure the requested cultural pattern, with clear scope and count limits."
