@@ -9,7 +9,7 @@
       "name": "social-glass",
       "source": "./plugins/social-glass",
       "description": "Explore live culture and consumer insights from Social Glass.",
-      "version": "0.1.3",
+      "version": "0.1.4",
       "author": {
         "name": "Social Glass"
       }
