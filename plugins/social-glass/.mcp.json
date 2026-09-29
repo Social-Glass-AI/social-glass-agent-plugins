@@ -3,7 +3,10 @@
     "social-glass": {
       "type": "http",
       "url": "https://mcp.socialglass.ai/mcp",
-      "scopes": ["openid", "profile", "email", "offline_access"]
+      "scopes": ["openid", "profile", "email", "offline_access"],
+      "oauth": {
+        "scopes": "openid profile email offline_access"
+      }
     }
   }
 }
