@@ -1,6 +1,6 @@
 {
   "name": "social-glass",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Explore live culture and consumer insights from Social Glass.",
   "author": {
     "name": "Social Glass",
@@ -21,7 +21,7 @@
   "interface": {
     "displayName": "Social Glass",
     "shortDescription": "Culture and consumer insights",
-    "longDescription": "Search cultural evidence, explore creators, and work with your organization's Insights, Projects, and reports. Social Glass helps researchers and brand teams connect emerging patterns to supporting social content. Sign in with a Social Glass account; results and actions follow your organization's permissions. New research can be saved as drafts, and updates to existing Insights and Projects are staged for review. The plugin does not provide private administrator tools or create Persona and Report records.",
+    "longDescription": "Search cultural evidence, explore creators, and work with your organization's Insights, Projects, and reports. Social Glass helps researchers and brand teams connect emerging patterns to supporting social content. Sign in with a Social Glass account; results and actions follow your organization's permissions. New research can be saved as drafts, and updates to existing Insights and Projects are staged for review. The plugin does not provide private administrator tools or create Persona records.",
     "developerName": "Social Glass",
     "category": "Productivity",
     "capabilities": [
