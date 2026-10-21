@@ -1,6 +1,6 @@
-# Social Glass Agent Plugins
+# SocialGlass Agent Plugins
 
-Explore live culture and consumer insights from Social Glass in Codex or Claude Code. The plugin includes the hosted MCP connection and native workflow skills.
+Explore live culture and consumer insights from SocialGlass in Codex or Claude Code. The plugin includes the hosted MCP connection and native workflow skills.
 
 ## Codex
 
@@ -20,7 +20,7 @@ Enable automatic releases once in `/plugin` → **Marketplaces** → **social-gl
 
 ## Skills only
 
-If the Social Glass MCP is already configured separately, install just the shared skills:
+If the SocialGlass MCP is already configured separately, install just the shared skills:
 
 ```bash
 npx skills add Social-Glass-AI/social-glass-agent-plugins --skill '*' -g -y
@@ -30,4 +30,4 @@ Update with `npx skills update -g -y`. Use either the skills-only installation o
 
 After installation, start a fresh agent session and complete the OAuth flow when prompted.
 
-For setup details, see [Social Glass agent plugins](https://docs.socialglass.ai/reference/plugins).
+For setup details, see [SocialGlass agent plugins](https://docs.socialglass.ai/reference/plugins).

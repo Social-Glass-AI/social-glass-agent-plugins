@@ -1,7 +1,7 @@
 {
   "name": "social-glass",
   "interface": {
-    "displayName": "Social Glass"
+    "displayName": "SocialGlass"
   },
   "plugins": [
     {

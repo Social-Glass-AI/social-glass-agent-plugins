@@ -1,9 +1,9 @@
 {
   "name": "social-glass",
-  "version": "0.1.9",
-  "description": "Explore live culture and consumer insights from Social Glass.",
+  "version": "0.1.12",
+  "description": "Explore live culture and consumer insights from SocialGlass.",
   "author": {
-    "name": "Social Glass",
+    "name": "SocialGlass",
     "url": "https://socialglass.ai",
     "email": "team@socialglass.ai"
   },
@@ -19,10 +19,10 @@
   "mcpServers": "./.mcp.json",
   "skills": "./skills/",
   "interface": {
-    "displayName": "Social Glass",
+    "displayName": "SocialGlass",
     "shortDescription": "Culture and consumer insights",
-    "longDescription": "Search cultural evidence, explore creators, and work with your organization's Insights, Projects, and reports. Social Glass helps researchers and brand teams connect emerging patterns to supporting social content. Sign in with a Social Glass account; results and actions follow your organization's permissions. New research can be saved as drafts, and updates to existing Insights and Projects are staged for review. The plugin does not provide private administrator tools or create Persona records.",
-    "developerName": "Social Glass",
+    "longDescription": "Search cultural evidence, explore creators, and work with your organization's Insights, Projects, and reports. SocialGlass helps researchers and brand teams connect emerging patterns to supporting social content. Sign in with a SocialGlass account; results and actions follow your organization's permissions. New research can be saved as drafts, and updates to existing Insights and Projects are staged for review. The plugin does not provide private administrator tools or create Persona records.",
+    "developerName": "SocialGlass",
     "category": "Productivity",
     "capabilities": [
       "Search cultural evidence",

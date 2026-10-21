@@ -1,13 +1,13 @@
 ---
 name: cultural-analytics
-description: Measure or estimate the prevalence, volume, or share of a cultural pattern in Social Glass Posts. Use for questions such as what percentage of Posts mention a topic, product type, behavior, aesthetic, or trend.
+description: Measure or estimate the prevalence, volume, or share of a cultural pattern in SocialGlass Posts. Use for questions such as what percentage of Posts mention a topic, product type, behavior, aesthetic, or trend.
 ---
 
 # Cultural analytics
 
 ## When to use this skill
 
-Use this Social Glass skill when a user needs evidence from Social Glass Posts to measure or estimate how common a cultural pattern is. It fits questions about the share of Posts that mention a topic, product type, behavior, aesthetic, or trend. Call `get_context` first and use its returned scope. Ask the user to choose an organization only when the returned context says selection is required.
+Use this SocialGlass skill when a user needs evidence from SocialGlass Posts to measure or estimate how common a cultural pattern is. It fits questions about the share of Posts that mention a topic, product type, behavior, aesthetic, or trend. Call `get_context` first and use its returned scope. Ask the user to choose an organization only when the returned context says selection is required.
 
 1. Call `get_context` at `scope: "organization"` for the requested organization, or `scope: "all_organizations"` when the question spans every client.
 2. State the population, time range, denominator, and one simple inclusion rule.

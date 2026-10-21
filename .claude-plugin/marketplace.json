@@ -1,17 +1,17 @@
 {
   "name": "social-glass",
-  "description": "Social Glass plugins for culture and consumer insight workflows.",
+  "description": "SocialGlass plugins for culture and consumer insight workflows.",
   "owner": {
-    "name": "Social Glass"
+    "name": "SocialGlass"
   },
   "plugins": [
     {
       "name": "social-glass",
       "source": "./plugins/social-glass",
-      "description": "Explore live culture and consumer insights from Social Glass.",
-      "version": "0.1.9",
+      "description": "Explore live culture and consumer insights from SocialGlass.",
+      "version": "0.1.12",
       "author": {
-        "name": "Social Glass"
+        "name": "SocialGlass"
       }
     }
   ]

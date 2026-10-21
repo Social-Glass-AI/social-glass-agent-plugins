@@ -6,7 +6,8 @@
       "scopes": ["openid", "profile", "email", "offline_access"],
       "oauth": {
         "scopes": "openid profile email offline_access"
-      }
+      },
+      "tool_input_schema_max_bytes": 20000
     }
   }
 }
